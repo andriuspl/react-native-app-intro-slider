@@ -65,7 +65,7 @@ export default class AppIntroSlider extends React.Component {
   }
 
   _renderDefaultButton = (name) => {
-    let content = <Text style={styles.buttonText}>{this.props[`${name.toLowerCase()}Label`]}</Text>;
+    let content = <Text style={[styles.buttonText, this.props.buttonTextStyle]}>{this.props[`${name.toLowerCase()}Label`]}</Text>;
     if (this.props.bottomButton) {
       content = <View style={[styles.bottomButton, (name === 'Skip' || name === 'Prev') && { backgroundColor: 'transparent' }]}>{content}</View>
     }
